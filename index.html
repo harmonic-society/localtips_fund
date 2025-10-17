@@ -30,6 +30,38 @@
         </div>
     </section>
 
+    <!-- Funding Gauge Section -->
+    <section class="funding-gauge">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FUNDING STATUS</span>
+                <h2 class="section-title">現在の支援状況</h2>
+            </div>
+
+            <div class="gauge-container">
+                <div class="gauge-bar">
+                    <div id="gauge-fill" class="gauge-fill" style="width: 0%"></div>
+                </div>
+
+                <div class="gauge-info">
+                    <div class="amount-info">
+                        <span class="current-amount" id="current-amount">¥0</span>
+                        <span class="goal-amount">目標: <span id="goal-amount">¥0</span></span>
+                    </div>
+                    <div class="progress-percentage" id="progress-percentage">0%</div>
+                </div>
+
+                <div class="backers-info">
+                    <span id="backers-count">0</span>人のサポーター
+                </div>
+
+                <div class="last-updated">
+                    最終更新: <span id="last-updated">-</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ストーリーセクション -->
     <section class="story">
         <div class="container">
@@ -317,5 +349,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="js/funding-gauge.js"></script>
 </body>
 </html>
