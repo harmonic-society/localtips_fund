@@ -10,6 +10,41 @@ function formatCurrency(amount, currency = 'JPY') {
   }).format(amount);
 }
 
+// 日付をフォーマットする関数
+function formatDate(dateValue) {
+  if (!dateValue) return '-';
+
+  let date;
+
+  // 数値（Unix timestamp）の場合
+  if (typeof dateValue === 'number') {
+    date = new Date(dateValue);
+  }
+  // 文字列の場合
+  else if (typeof dateValue === 'string') {
+    date = new Date(dateValue);
+  }
+  // Dateオブジェクトの場合
+  else if (dateValue instanceof Date) {
+    date = dateValue;
+  }
+  else {
+    return '-';
+  }
+
+  // 無効な日付の場合
+  if (isNaN(date.getTime())) {
+    return dateValue.toString();
+  }
+
+  // 日本語形式でフォーマット (例: 2025年1月15日)
+  return new Intl.DateTimeFormat('ja-JP', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(date);
+}
+
 // ゲージを更新する関数
 function updateGauge(data) {
   const currentAmount = data.current_amount || 0;
@@ -48,7 +83,7 @@ function updateGauge(data) {
   // 最終更新日時を更新
   const lastUpdatedEl = document.getElementById('last-updated');
   if (lastUpdatedEl) {
-    lastUpdatedEl.textContent = data.last_updated || '-';
+    lastUpdatedEl.textContent = formatDate(data.last_updated);
   }
 }
 
