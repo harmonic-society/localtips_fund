@@ -807,6 +807,20 @@ section {
     align-items: center;
 }
 
+.feature-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.feature-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
 .feature-image-placeholder {
     width: 200px;
     height: 200px;
@@ -1235,6 +1249,10 @@ section {
 
     .vision-card p {
         font-size: 0.85rem;
+    }
+
+    .feature-image img {
+        max-width: 320px;
     }
 
     .feature-text h2 {
