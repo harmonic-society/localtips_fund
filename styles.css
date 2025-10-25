@@ -972,14 +972,16 @@ section {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s;
+    transition: transform 0.8s ease;
     transform-style: preserve-3d;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border-radius: var(--border-radius);
 }
 
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+@media (hover: hover) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
 }
 
 .flip-card-front,

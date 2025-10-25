@@ -47,3 +47,36 @@ window.addEventListener('scroll', () => {
     // スクロール方向に応じた処理を追加可能
     lastScroll = currentScroll;
 });
+
+// フリップカードのタップ対応（モバイル用）
+document.addEventListener('DOMContentLoaded', () => {
+    const flipCard = document.querySelector('.flip-card');
+
+    if (flipCard) {
+        let isFlipped = false;
+
+        flipCard.addEventListener('click', () => {
+            isFlipped = !isFlipped;
+            const flipCardInner = flipCard.querySelector('.flip-card-inner');
+
+            if (isFlipped) {
+                flipCardInner.style.transform = 'rotateY(180deg)';
+            } else {
+                flipCardInner.style.transform = 'rotateY(0deg)';
+            }
+        });
+
+        // タッチデバイス用
+        flipCard.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            isFlipped = !isFlipped;
+            const flipCardInner = flipCard.querySelector('.flip-card-inner');
+
+            if (isFlipped) {
+                flipCardInner.style.transform = 'rotateY(180deg)';
+            } else {
+                flipCardInner.style.transform = 'rotateY(0deg)';
+            }
+        });
+    }
+});
