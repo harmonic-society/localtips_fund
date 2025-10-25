@@ -888,6 +888,15 @@ section {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+.highlight-text {
+    background: var(--color-accent);
+    color: var(--color-text);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-shadow: none;
+}
+
 /* ===========================
    制作体制セクション
    =========================== */
