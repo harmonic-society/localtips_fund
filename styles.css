@@ -777,7 +777,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 78, 137, 0.92) 0%, rgba(0, 51, 102, 0.92) 100%);
+    background: linear-gradient(135deg, rgba(40, 40, 40, 0.92) 0%, rgba(20, 20, 20, 0.92) 100%);
     z-index: 1;
 }
 
