@@ -737,7 +737,7 @@ section {
     display: block;
     width: 100%;
     padding: 1rem;
-    background: var(--color-secondary);
+    background: #016c38;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -747,7 +747,7 @@ section {
 }
 
 .plan-button:hover {
-    background: var(--color-primary);
+    background: #015028;
     transform: scale(1.02);
 }
 
@@ -756,7 +756,7 @@ section {
 }
 
 .plan-silver .plan-button:hover {
-    background: var(--color-secondary);
+    background: #E64A19;
 }
 
 /* ===========================
