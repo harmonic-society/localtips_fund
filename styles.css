@@ -940,6 +940,90 @@ section {
 }
 
 /* ===========================
+   会員特典セクション
+   =========================== */
+
+.member-benefits {
+    background: var(--color-bg-light);
+}
+
+.benefits-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.benefits-images {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.benefit-image-card,
+.benefit-image-platform {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.benefit-image-card:hover,
+.benefit-image-platform:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-image-card img,
+.benefit-image-platform img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.benefits-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.benefits-period {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    padding: 1rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.benefits-description {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--color-text);
+}
+
+.benefits-note {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-top: 0.5rem;
+}
+
+.benefits-highlight {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.8;
+    color: var(--color-secondary);
+    padding: var(--spacing-md);
+    background: white;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--color-primary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ===========================
    制作体制セクション
    =========================== */
 
@@ -1158,6 +1242,23 @@ section {
         gap: var(--spacing-md);
     }
 
+    .benefits-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .benefits-period {
+        font-size: 1rem;
+    }
+
+    .benefits-description {
+        font-size: 1rem;
+    }
+
+    .benefits-highlight {
+        font-size: 1.05rem;
+    }
+
     .production-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
@@ -1345,6 +1446,29 @@ section {
     .feature-text p,
     .feature-description {
         font-size: 0.9rem;
+    }
+
+    .benefits-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .benefits-period {
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
+
+    .benefits-description {
+        font-size: 0.9rem;
+    }
+
+    .benefits-note {
+        font-size: 0.8rem;
+    }
+
+    .benefits-highlight {
+        font-size: 1rem;
+        padding: 1rem;
     }
 
     .message-content h2 {
