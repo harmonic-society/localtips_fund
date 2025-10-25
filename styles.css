@@ -638,6 +638,21 @@ section {
     margin: 0.5rem 0;
 }
 
+.plans-disclaimer {
+    background: #fff9e6;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-top: var(--spacing-lg);
+    border-left: 4px solid #f39c12;
+}
+
+.plans-disclaimer p {
+    color: var(--color-text);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
 .plans-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
@@ -1241,6 +1256,15 @@ section {
 
     .feature-note {
         font-size: 0.75rem;
+    }
+
+    .plans-disclaimer {
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .plans-disclaimer p {
+        font-size: 0.85rem;
     }
 
     .story-message {
