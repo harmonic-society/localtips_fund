@@ -764,8 +764,26 @@ section {
    =========================== */
 
 .new-feature {
-    background: linear-gradient(135deg, var(--color-secondary) 0%, #003366 100%);
+    position: relative;
+    background: url('LINE_ALBUM_冊子プロジェクト_251025_1.jpg') center center / cover no-repeat;
     color: white;
+    overflow: hidden;
+}
+
+.new-feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 78, 137, 0.92) 0%, rgba(0, 51, 102, 0.92) 100%);
+    z-index: 1;
+}
+
+.new-feature .container {
+    position: relative;
+    z-index: 2;
 }
 
 .new-feature .section-label {
@@ -815,12 +833,14 @@ section {
     font-size: 2rem;
     font-weight: 900;
     margin-bottom: var(--spacing-md);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .feature-text p {
     margin-bottom: var(--spacing-md);
     line-height: 1.8;
-    opacity: 0.95;
+    opacity: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .feature-list {
@@ -832,6 +852,7 @@ section {
     padding: 0.7rem 0;
     padding-left: 1.5rem;
     position: relative;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .feature-list li::before {
@@ -846,6 +867,11 @@ section {
     font-size: 1.05rem;
     font-weight: 600;
     opacity: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.feature-label {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* ===========================
