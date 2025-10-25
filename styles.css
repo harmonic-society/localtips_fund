@@ -641,18 +641,20 @@ section {
 }
 
 .plans-disclaimer {
-    background: #fff9e6;
-    padding: var(--spacing-md);
+    background: white;
+    padding: var(--spacing-lg);
     border-radius: var(--border-radius);
     margin-top: var(--spacing-lg);
-    border-left: 4px solid #f39c12;
+    border: 3px dashed #d0d0d0;
+    text-align: center;
 }
 
 .plans-disclaimer p {
     color: var(--color-text);
-    font-size: 0.9rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.9;
     margin: 0;
+    font-weight: 400;
 }
 
 .plans-grid {
@@ -1269,12 +1271,13 @@ section {
     }
 
     .plans-disclaimer {
-        padding: 1rem;
+        padding: 1.5rem 1rem;
         margin-top: 1.5rem;
     }
 
     .plans-disclaimer p {
-        font-size: 0.85rem;
+        font-size: 0.88rem;
+        line-height: 1.8;
     }
 
     .story-message {
