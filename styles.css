@@ -1436,6 +1436,28 @@ section {
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+}
+
+.production-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    margin-top: auto;
+}
+
+.production-button:hover {
+    background: var(--color-accent);
+    color: var(--color-text);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 184, 1, 0.4);
 }
 
 .production-note {
