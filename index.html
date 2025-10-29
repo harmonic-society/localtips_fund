@@ -39,8 +39,36 @@
             </div>
 
             <div class="gauge-container">
+                <!-- マイルストーン表示 -->
+                <div class="milestones">
+                    <div class="milestone" data-percent="40">
+                        <div class="milestone-marker"></div>
+                        <div class="milestone-label">
+                            <span class="milestone-percent">40%</span>
+                            <span class="milestone-copies">100部</span>
+                        </div>
+                    </div>
+                    <div class="milestone" data-percent="65">
+                        <div class="milestone-marker"></div>
+                        <div class="milestone-label">
+                            <span class="milestone-percent">65%</span>
+                            <span class="milestone-copies">300部</span>
+                        </div>
+                    </div>
+                    <div class="milestone" data-percent="100">
+                        <div class="milestone-marker"></div>
+                        <div class="milestone-label">
+                            <span class="milestone-percent">100%</span>
+                            <span class="milestone-copies">500部</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="gauge-bar">
                     <div id="gauge-fill" class="gauge-fill" style="width: 0%"></div>
+                    <div class="milestone-line" style="left: 40%"></div>
+                    <div class="milestone-line" style="left: 65%"></div>
+                    <div class="milestone-line" style="left: 100%"></div>
                 </div>
 
                 <div class="gauge-info">

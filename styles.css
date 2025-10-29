@@ -282,14 +282,92 @@ section {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
+/* マイルストーン */
+.milestones {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.milestone {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.milestone[data-percent="40"] {
+    left: 40%;
+}
+
+.milestone[data-percent="65"] {
+    left: 65%;
+}
+
+.milestone[data-percent="100"] {
+    left: 100%;
+}
+
+.milestone-marker {
+    width: 12px;
+    height: 12px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.milestone-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--color-primary);
+    min-width: 60px;
+}
+
+.milestone-percent {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.milestone-copies {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--color-text);
+    white-space: nowrap;
+}
+
 .gauge-bar {
     width: 100%;
     height: 40px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-    overflow: hidden;
+    overflow: visible;
     margin-bottom: 30px;
     box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.milestone-line {
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    width: 3px;
+    background: var(--color-primary);
+    opacity: 0.5;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
 .gauge-fill {
@@ -300,6 +378,7 @@ section {
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
     position: relative;
     overflow: hidden;
+    z-index: 2;
 }
 
 .gauge-fill::after {
@@ -389,6 +468,23 @@ section {
         padding: 25px 20px;
     }
 
+    .milestones {
+        height: 70px;
+    }
+
+    .milestone-label {
+        padding: 6px 10px;
+        min-width: 50px;
+    }
+
+    .milestone-percent {
+        font-size: 0.75rem;
+    }
+
+    .milestone-copies {
+        font-size: 0.95rem;
+    }
+
     .gauge-bar {
         height: 30px;
     }
@@ -425,6 +521,29 @@ section {
 @media (max-width: 480px) {
     .gauge-container {
         padding: 20px 15px;
+    }
+
+    .milestones {
+        height: 60px;
+    }
+
+    .milestone-label {
+        padding: 5px 8px;
+        min-width: 45px;
+    }
+
+    .milestone-percent {
+        font-size: 0.65rem;
+    }
+
+    .milestone-copies {
+        font-size: 0.85rem;
+    }
+
+    .milestone-marker {
+        width: 10px;
+        height: 10px;
+        border: 2px solid white;
     }
 
     .gauge-bar {
