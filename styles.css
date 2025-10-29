@@ -1195,6 +1195,69 @@ section {
     font-weight: 700;
 }
 
+.feature-note-inline {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-left: 0.5rem;
+}
+
+.feature-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.feature-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* ===========================
+   インタビュー動画撮影セクション
+   =========================== */
+
+.interview-video {
+    position: relative;
+    background: url('LINE_ALBUM_冊子プロジェクト_251025_2.jpg') center center / cover no-repeat;
+    color: white;
+    overflow: hidden;
+}
+
+.interview-video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 78, 137, 0.92) 0%, rgba(40, 40, 40, 0.92) 100%);
+    z-index: 1;
+}
+
+.interview-video .container {
+    position: relative;
+    z-index: 2;
+}
+
+.interview-video .feature-label {
+    color: var(--color-accent);
+}
+
+.interview-video .feature-text h2 {
+    color: white;
+}
+
+.interview-video .feature-link {
+    color: var(--color-accent);
+}
+
+.interview-video .feature-link:hover {
+    color: white;
+}
+
 /* ===========================
    会員特典セクション
    =========================== */
