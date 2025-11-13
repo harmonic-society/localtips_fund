@@ -1087,6 +1087,16 @@ section {
     border-bottom: none;
 }
 
+.plan-includes {
+    background: linear-gradient(135deg, rgba(247, 184, 1, 0.1) 0%, rgba(255, 107, 53, 0.1) 100%);
+    padding: 0.8rem 1rem !important;
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--color-primary);
+    border: 2px dashed var(--color-accent);
+    margin-bottom: 0.5rem !important;
+}
+
 .feature-note {
     display: block;
     font-size: 0.8rem;
