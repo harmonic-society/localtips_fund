@@ -974,7 +974,7 @@ section {
 }
 
 .premium-badge {
-    background: var(--color-premium);
+    background: #000000;
     color: white;
 }
 
