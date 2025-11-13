@@ -915,9 +915,17 @@ section {
 
 .plans-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-md);
     align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .plan-card {
@@ -1631,11 +1639,6 @@ section {
     }
 
     .story-content {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-
-    .plans-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
