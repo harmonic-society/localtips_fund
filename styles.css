@@ -957,7 +957,7 @@ section {
 .plan-bronze::before { background: var(--color-bronze); }
 .plan-silver::before { background: var(--color-silver); }
 .plan-gold::before { background: var(--color-gold); }
-.plan-premium::before { background: var(--color-premium); }
+.plan-premium::before { background: var(--color-gold); }
 
 .plan-badge {
     position: absolute;
