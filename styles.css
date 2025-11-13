@@ -876,16 +876,53 @@ section {
    =========================== */
 
 .plans {
-    background: var(--color-bg-light);
+    position: relative;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    overflow: hidden;
+}
+
+.plans::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(247, 184, 1, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.plans .container {
+    position: relative;
+    z-index: 2;
+}
+
+.plans .section-label {
+    color: var(--color-accent);
+    text-shadow: 0 0 20px rgba(247, 184, 1, 0.5);
+}
+
+.plans .section-title {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.plans .section-description {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .plans-note {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     padding: var(--spacing-lg);
     border-radius: var(--border-radius);
     text-align: center;
     margin-bottom: var(--spacing-lg);
-    border: 3px dashed #d0d0d0;
+    border: 3px dashed var(--color-accent);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .plans-note p {
@@ -897,12 +934,14 @@ section {
 }
 
 .plans-disclaimer {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     padding: var(--spacing-lg);
     border-radius: var(--border-radius);
     margin-top: var(--spacing-lg);
-    border: 3px dashed #d0d0d0;
+    border: 3px dashed var(--color-accent);
     text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .plans-disclaimer p {
@@ -929,15 +968,17 @@ section {
 }
 
 .plan-card {
-    background: white;
-    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 20px;
     padding: var(--spacing-md);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: var(--transition);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .plan-card::before {
@@ -946,18 +987,55 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
+    height: 6px;
+    transition: height 0.3s ease;
+}
+
+.plan-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(247, 184, 1, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
 }
 
 .plan-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(247, 184, 1, 0.4), 0 0 40px rgba(255, 107, 53, 0.2);
+    border-color: var(--color-accent);
 }
 
-.plan-bronze::before { background: var(--color-bronze); }
-.plan-silver::before { background: var(--color-silver); }
-.plan-gold::before { background: var(--color-gold); }
-.plan-premium::before { background: var(--color-gold); }
+.plan-card:hover::before {
+    height: 10px;
+}
+
+.plan-card:hover::after {
+    opacity: 1;
+}
+
+.plan-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.plan-bronze::before {
+    background: linear-gradient(90deg, var(--color-bronze) 0%, #E8A76D 100%);
+}
+.plan-silver::before {
+    background: linear-gradient(90deg, var(--color-silver) 0%, #E0E0E0 100%);
+}
+.plan-gold::before {
+    background: linear-gradient(90deg, var(--color-gold) 0%, #FFE55C 100%);
+}
+.plan-premium::before {
+    background: linear-gradient(90deg, #FFD700 0%, #FFA500 50%, #FF6B35 100%);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
 
 .plan-badge {
     position: absolute;
@@ -965,17 +1043,30 @@ section {
     right: -30px;
     background: var(--color-accent);
     color: var(--color-text);
-    padding: 4px 35px;
-    font-size: 0.75rem;
+    padding: 5px 40px;
+    font-size: 0.8rem;
     font-weight: 700;
     transform: rotate(45deg);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     white-space: nowrap;
+    z-index: 10;
+    letter-spacing: 1px;
 }
 
 .premium-badge {
-    background: #000000;
-    color: white;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: var(--color-text);
+    box-shadow: 0 4px 20px rgba(255, 165, 0, 0.6);
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(255, 165, 0, 0.6);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(255, 165, 0, 0.9);
+    }
 }
 
 .plan-header {
@@ -999,7 +1090,10 @@ section {
 .price-amount {
     font-size: 2.5rem;
     font-weight: 900;
-    color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .price-period {
