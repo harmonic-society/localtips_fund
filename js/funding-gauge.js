@@ -183,12 +183,6 @@ function updateGauge(data) {
     backersCountEl.textContent = data.backers_count || 0;
   }
 
-  // 最終更新日時を更新
-  const lastUpdatedEl = document.getElementById('last-updated');
-  if (lastUpdatedEl) {
-    lastUpdatedEl.textContent = formatDate(data.last_updated);
-  }
-
   // マイルストーンチェック
   checkMilestones(percentage);
 }
