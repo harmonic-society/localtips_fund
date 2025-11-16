@@ -116,7 +116,7 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(90deg, #E74C3C 0%, #EC5B4E 100%);
+    background: #ff6b36;
     color: white;
     padding: 12px 0;
     z-index: 1000;
