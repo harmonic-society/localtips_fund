@@ -1,15 +1,15 @@
-// カウントダウンタイマー
+// カウントダウンバー
 function updateCountdown() {
     const targetDate = new Date('2026-01-01T00:00:00').getTime();
     const now = new Date().getTime();
     const distance = targetDate - now;
 
     if (distance < 0) {
-        // カウントダウン終了
-        document.getElementById('days').textContent = '0';
-        document.getElementById('hours').textContent = '0';
-        document.getElementById('minutes').textContent = '0';
-        document.getElementById('seconds').textContent = '0';
+        // カウントダウン終了 - バーを非表示にする
+        const countdownBar = document.querySelector('.countdown-bar');
+        if (countdownBar) {
+            countdownBar.style.display = 'none';
+        }
         return;
     }
 
@@ -18,10 +18,15 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById('days').textContent = days;
-    document.getElementById('hours').textContent = hours;
-    document.getElementById('minutes').textContent = minutes;
-    document.getElementById('seconds').textContent = seconds;
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+
+    if (daysEl) daysEl.textContent = days;
+    if (hoursEl) hoursEl.textContent = hours;
+    if (minutesEl) minutesEl.textContent = minutes;
+    if (secondsEl) secondsEl.textContent = seconds;
 }
 
 // 初回実行とインターバル設定
