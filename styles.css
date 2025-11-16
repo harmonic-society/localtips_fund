@@ -104,6 +104,73 @@ html {
     color: white;
     padding: var(--spacing-md);
     max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+/* ===========================
+   カウントダウンタイマー
+   =========================== */
+
+.countdown-timer {
+    background: rgba(255, 107, 53, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: var(--spacing-md);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.countdown-label {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+    margin-bottom: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.countdown-value {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.countdown-unit {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-weight: 600;
+    margin-top: 0.3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+}
+
+.countdown-date {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
 }
 
 .hero-title {
@@ -1694,6 +1761,27 @@ section {
 
     .hero-content {
         padding: var(--spacing-md);
+        gap: var(--spacing-md);
+    }
+
+    .countdown-timer {
+        padding: 1.2rem;
+    }
+
+    .countdown-display {
+        gap: 1rem;
+    }
+
+    .countdown-item {
+        min-width: 60px;
+    }
+
+    .countdown-value {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    .countdown-unit {
+        font-size: 0.85rem;
     }
 
     section {
@@ -1822,6 +1910,36 @@ section {
 
     .hero-content {
         padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .countdown-timer {
+        padding: 1rem;
+    }
+
+    .countdown-label {
+        font-size: 0.85rem;
+    }
+
+    .countdown-display {
+        gap: 0.8rem;
+    }
+
+    .countdown-item {
+        min-width: 50px;
+    }
+
+    .countdown-value {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .countdown-unit {
+        font-size: 0.75rem;
+        margin-top: 0.2rem;
+    }
+
+    .countdown-date {
+        font-size: 0.8rem;
     }
 
     .hero-title {
