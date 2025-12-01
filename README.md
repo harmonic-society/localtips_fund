@@ -4,6 +4,8 @@
 
 千葉県の地域活性化メディア「ローカルチップス」の冊子化プロジェクトに伴うスポンサー会員募集のランディングページです。
 
+🔗 **公開URL**: https://harmonic-society.github.io/localtips_fund/
+
 ## ファイル構成
 
 ```
