@@ -32,6 +32,12 @@
                 地域で活躍するヒントを一冊の本に。地域で活動したい"あなた"へ送る思考本。
             </p>
             <a href="#plans" class="cta-button">プロジェクトを応援する</a>
+            <div class="like-container">
+                <button id="like-button" class="like-button">
+                    <span class="like-icon">&#9825;</span>
+                    <span id="like-count">0</span>
+                </button>
+            </div>
         </div>
         <div class="scroll-indicator">
             <span>SCROLL</span>
@@ -458,7 +464,12 @@
         </div>
     </footer>
 
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+
     <script src="script.js"></script>
     <script src="js/funding-gauge.js"></script>
+    <script src="js/like-button.js"></script>
 </body>
 </html>

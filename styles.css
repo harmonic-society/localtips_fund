@@ -225,6 +225,64 @@ html {
     background: #FFD700;
 }
 
+/* いいねボタン */
+.like-container {
+    margin-top: var(--spacing-md);
+    animation: fadeInUp 1s ease-out 0.8s backwards;
+}
+
+.like-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+}
+
+.like-button:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+.like-button:disabled {
+    cursor: default;
+}
+
+.like-button.liked {
+    background: rgba(255, 107, 107, 0.3);
+    border-color: #ff6b6b;
+}
+
+.like-button.liked .like-icon {
+    color: #ff6b6b;
+}
+
+.like-icon {
+    font-size: 1.4rem;
+    transition: var(--transition);
+}
+
+.like-button.like-animation .like-icon {
+    animation: heartBeat 0.6s ease-in-out;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.3); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: 40px;
