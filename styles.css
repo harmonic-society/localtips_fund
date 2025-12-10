@@ -2029,7 +2029,14 @@ section {
 
     .plans-note p {
         font-size: 0.7rem;
+    }
+
+    .plans-note .plans-note-period {
         white-space: nowrap;
+    }
+
+    .plans-note .plans-note-detail {
+        white-space: normal;
     }
 
     .plans-disclaimer {
