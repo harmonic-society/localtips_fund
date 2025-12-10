@@ -989,20 +989,20 @@ section {
 
 .plans-note {
     background: white;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--border-radius);
     text-align: center;
-    margin-bottom: var(--spacing-lg);
-    border: 3px dashed var(--color-accent);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: var(--spacing-md);
+    border: 2px dashed var(--color-accent);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
 }
 
 .plans-note p {
     color: var(--color-text);
     font-weight: 500;
-    margin: 0.8rem 0;
-    font-size: 1rem;
-    line-height: 1.8;
+    margin: 0.3rem 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
 }
 
 .plans-disclaimer {
