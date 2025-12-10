@@ -693,7 +693,16 @@ section {
     font-weight: 600;
 }
 
+/* SP専用改行（モバイルのみ表示） */
+.sp-only {
+    display: none;
+}
+
 @media (max-width: 768px) {
+    .sp-only {
+        display: inline;
+    }
+
     .gauge-container {
         padding: 25px 20px;
     }
