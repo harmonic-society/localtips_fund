@@ -2088,7 +2088,8 @@ section {
     }
 
     .vision-card h3 {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
     }
 
     .vision-card p {
