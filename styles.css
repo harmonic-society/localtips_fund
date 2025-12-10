@@ -2024,11 +2024,12 @@ section {
     }
 
     .plans-note {
-        padding: 1.5rem 1rem;
+        padding: 0.8rem 0.5rem;
     }
 
     .plans-note p {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+        white-space: nowrap;
     }
 
     .plans-disclaimer {
