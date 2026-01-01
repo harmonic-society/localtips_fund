@@ -1,6 +1,6 @@
 // カウントダウンバー
 function updateCountdown() {
-    const targetDate = new Date('2026-01-01T00:00:00').getTime();
+    const targetDate = new Date('2026-01-31T23:59:00').getTime();
     const now = new Date().getTime();
     const distance = targetDate - now;
 
